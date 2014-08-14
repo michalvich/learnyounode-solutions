@@ -1,10 +1,6 @@
 var fs = require('fs')
 
-var filename = process.argv[2];
-
-var data = fs.readFileSync(filename);
-
-
-var split = data.toString().split('\n');
-
-console.log(split.length-1);
+var filename = process.argv[2]
+var data = fs.readFileSync(filename)
+var lines = data.toString().split('\n').length-1;
+console.log(lines);
